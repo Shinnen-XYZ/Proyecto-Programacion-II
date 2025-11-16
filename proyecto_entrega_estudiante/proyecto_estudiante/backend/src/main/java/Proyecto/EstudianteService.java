@@ -55,7 +55,6 @@ public class EstudianteService {
         repo.deleteById(id);
     }
 
-    // Validaciones de negocio
     private void validar(Estudiante e, boolean esNuevo, Long idActual) {
 
         if (e.getNombre() == null || e.getNombre().trim().isEmpty()) {
@@ -87,6 +86,6 @@ public class EstudianteService {
         }
 
         IdiomaStrategy estrategia = idiomaFactory.obtenerEstrategia(idiomaOriginal);
-        estrategia.aplicar(e); // normaliza el idioma a "español", "inglés" o "francés"
+        estrategia.aplicar(e); 
     }
 }
