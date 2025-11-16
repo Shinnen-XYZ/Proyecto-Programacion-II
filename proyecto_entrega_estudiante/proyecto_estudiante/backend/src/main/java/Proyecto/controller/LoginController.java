@@ -12,7 +12,6 @@ import java.util.Map;
 @CrossOrigin(origins = "*")
 public class LoginController {
 
-    // usuario y contraseña "quemados" para el proyecto
     private static final String USUARIO_VALIDO = "admin";
     private static final String PASSWORD_VALIDA = "1234";
 
@@ -27,7 +26,6 @@ public class LoginController {
         if (USUARIO_VALIDO.equals(request.getUsuario())
                 && PASSWORD_VALIDA.equals(request.getPassword())) {
 
-            // para algo más real se usaría JWT o sesión, pero aquí solo devolvemos OK
             return ResponseEntity.ok(Map.of("mensaje", "Login correcto"));
         } else {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
@@ -35,3 +33,4 @@ public class LoginController {
         }
     }
 }
+
