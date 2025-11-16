@@ -8,7 +8,6 @@ import java.util.Map;
 @Component
 public class EstudianteFactory {
 
-    // Crea un Estudiante a partir del JSON recibido (Map)
     public Estudiante fromMap(Map<String, Object> data) {
         Estudiante e = new Estudiante();
 
@@ -25,3 +24,4 @@ public class EstudianteFactory {
         return e;
     }
 }
+
