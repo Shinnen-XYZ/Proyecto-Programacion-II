@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import java.util.Map;
 
-// Manejo global de algunas excepciones simples
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
@@ -21,3 +20,4 @@ public class GlobalExceptionHandler {
                 .body(Map.of("error", mensaje));
     }
 }
+
