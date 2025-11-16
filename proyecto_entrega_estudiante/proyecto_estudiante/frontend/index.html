@@ -95,10 +95,7 @@
 <body>
 
 <script>
-    // Si usas login con localStorage, esto lo mantiene:
     if (localStorage.getItem('logueado') !== 'si') {
-        // Si no querés protección, comentá esta línea:
-        // window.location.href = "login.html";
     }
 </script>
 
@@ -113,7 +110,6 @@
     <div class="form-box">
         <h2 id="titulo-form">Crear Nuevo Estudiante</h2>
 
-        <!-- id oculto para saber si estamos editando -->
         <input type="hidden" id="idEditar">
 
         <input type="text" id="nombre" placeholder="Nombre">
