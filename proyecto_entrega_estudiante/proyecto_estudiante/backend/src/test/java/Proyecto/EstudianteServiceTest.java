@@ -16,7 +16,7 @@ class EstudianteServiceTest {
     private EstudianteService service;
 
     @BeforeEach
-    void setUp() {
+    void before() {
         EstudianteRepo repo = new EstudianteRepo();
         EstudianteFactory factory = new EstudianteFactory();
         service = new EstudianteService(repo, factory);
@@ -79,3 +79,4 @@ class EstudianteServiceTest {
         assertThrows(IllegalArgumentException.class, () -> service.create(data));
     }
 }
+
